@@ -1,13 +1,242 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Segoe UI", serif;
+  background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background-color: #075e54;
+  color: #03312d;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 20px;
+}
+
+.chat-title {
+  text-shadow: 1px 1px 1px #098076;
+  margin-left: auto;
+}
+
+.logout {
+  padding: 5px 10px;
+  margin-left: auto;
+  border-radius: 5px;
+  border: 1px solid white;
+  background: #075d54;
+  color: white;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #128c7e;
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-list {
+  padding: 20px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.message-text {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 41px;
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 5px 10px 5px;
+  background-color: #d5f8d0;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.message-timestamp {
+  font-size: 10px;
+  color: #655f5f;
+  margin: auto 0 0 20px;
+}
+
+.message-input {
+  display: flex;
+  align-items: flex-end;
+  height: 60px;
+  padding: 0 20px;
+  background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.message-input button[type="submit"] {
+  margin-left: 20px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #075e54;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.message-input button[type="submit"]:hover {
+  background-color: #128c7e;
+}
+
+.get {
+  align-items: flex-end;
+}
+
+.get-bg {
+  background: #075d54;
+  color: white;
+}
+
+/*========================*/
+.login {
+  display: flex;
+  position: relative;
+  max-width: 1903px;
+  max-height: 975px;
+  margin-top: 50px;
+}
+
+.login-form {
+  position: relative;
+  width: 400px;
+  min-height: 510px;
+  margin: 160px auto;
+  background: #beb9a3;
+  border-radius: 16px;
+  box-shadow: 0 0 0 1px #a99e75,
+  inset 2px 2px 8px #5e5a4b, inset -5px -5px 8px #eee7c9;
+}
+
+.login-form__header {
+  width: 93px;
+  margin: 67px auto 66px;
+  font-family: 'Segoe UI', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.register__header {
+  width: 210px;
+  margin: 51px auto 50px;
+}
+
+.login-form__input {
+  display: block;
+  width: 320px;
+  height: 52px;
+  margin: 0 auto 30px;
+  background: #D9D9D9;
+  border-radius: 30px;
+  font-family: 'Segoe UI', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 16px;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: inset 2px 2px 5px #9a9ba2, inset -5px -5px 10px #f1f1f1;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-form__input:focus {
+  box-shadow: inset 1px 1px 2px #9a9ba2, inset -1px -1px 2px #f1f1f1;
+}
+
+.name-register {
+  margin: 4px auto 38px;
+}
+
+.btn-reg {
+  margin: 20px auto 0;
+}
+
+.btn {
+  display: block;
+  width: 320px;
+  height: 52px;
+  margin: 66px auto 0;
+  background: #D9D9D9;
+  border-radius: 30px;
+  font-family: 'Segoe UI', serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 24px;
+  color: #747578;
+  border: none;
+  outline: none;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: 2px 2px 5px #9a9ba2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.46),
+  inset -2px -2px 5px #9a9ba2, inset 5px 5px 10px #f1f1f1;
+}
+
+.btn-disabled {
+  display: block;
+  width: 320px;
+  height: 52px;
+  margin: 66px auto 0;
+  background: #D9D9D9;
+  border-radius: 30px;
+  font-family: 'Segoe UI', serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 24px;
+  color: #747578;
+  border: none;
+  outline: none;
+  text-shadow: 1px 1px 0 #fff;
+  box-shadow: 2px 2px 5px #9a9ba2;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
