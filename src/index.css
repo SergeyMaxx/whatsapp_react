@@ -64,13 +64,19 @@ body {
   display: flex;
   align-items: center;
   width: max-content;
-  height: 41px;
+  max-width: 1200px;
+  min-height: 41px;
   font-size: 16px;
   margin-top: 5px;
   padding: 5px 10px 5px;
   background-color: #d5f8d0;
   border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.inc {
+  background: #7cab7a;
+  margin-left: auto;
 }
 
 .message-timestamp {

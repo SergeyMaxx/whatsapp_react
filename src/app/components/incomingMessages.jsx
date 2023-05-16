@@ -1,11 +1,11 @@
 import React from 'react'
 
-function MessageList({messages}) {
+const IncomingMessages = ({messages}) => {
   return (
     <ul className="message-list">
       {messages.map(message => (
         <li key={message.id} className="message">
-          <div className="message-text">
+          <div className="message-text inc">
             {message.text}
             <span className="message-timestamp">
               {message.timestamp}
@@ -17,4 +17,4 @@ function MessageList({messages}) {
   )
 }
 
-export default MessageList
+export default IncomingMessages
